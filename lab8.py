@@ -1,42 +1,28 @@
-import pandas as pd
 import numpy as np
+import csv
 
-print("--- Зчитування даних з csv-файлу у DataFrame ---")
-df = pd.read_csv('african_crises.csv')
-print(df.head())
+data = np.genfromtxt('african_crises.csv', delimiter=',', dtype=None, names=True, encoding='utf-8')
 
-print("\n--- Фільтрування даних за критеріями ---")
-filtered_exact = df[df['year'] == 2000]
-print(filtered_exact.head())
+# Завдання 1
+sort_1_asc = np.sort(data, order='year')
+sort_1_desc = np.sort(data, order='year')[::-1]
 
-filtered_range = df[df['year'].between(1990, 2000)]
-print(filtered_range.head())
+# Завдання 2
+sort_2_asc = np.sort(data, order=['country', 'year'])
+sort_2_desc = np.sort(data, order=['country', 'year'])[::-1]
 
-start_char = input("Введіть першу літеру для пошуку по країні: ")
-filtered_starts = df[df['country'].str.startswith(start_char, na=False)]
-print(filtered_starts.head())
+# Завдання 3: Виведення результатів та запис у файли
+def save_and_show(dataset, filename, start=0, end=None):
+    subset = dataset[start:end] if end else dataset[start:]
+    print(subset)
+    
+    with open(filename, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        writer.writerow(dataset.dtype.names)
+        for row in subset:
+            writer.writerow(row)
 
-substring = input("Введіть підстрічку для пошуку по країні: ")
-filtered_contains = df[df['country'].str.contains(substring, na=False)]
-print(filtered_contains.head())
-
-print("\n--- Сортування даних за критеріями ---")
-sorted_asc_one = df.sort_values(by='inflation_annual_cpi', ascending=True)
-sorted_desc_one = df.sort_values(by='inflation_annual_cpi', ascending=False)
-
-sorted_two_cols = df.sort_values(by=['country', 'year'], ascending=[True, False])
-print(sorted_two_cols.head())
-
-print("\n--- Групування даних по певному полі ---")
-grouped_stats = df.groupby('country')['inflation_annual_cpi'].agg(['min', 'max', 'mean', 'std']).reset_index()
-print(grouped_stats)
-
-print("\n--- Створення додаткового датасету та об’єднання ---")
-unique_countries = df['country'].unique()
-additional_df = pd.DataFrame({
-    'country': unique_countries,
-    'Test Column': np.random.randint(100, 999, size=len(unique_countries))
-})
-
-merged_df = pd.merge(df, additional_df, on='country', how='left')
-print(merged_df.head())
+save_and_show(sort_1_asc, 'sort_1_asc.csv', 0, 5)
+save_and_show(sort_1_desc, 'sort_1_desc.csv', 0, 5)
+save_and_show(sort_2_asc, 'sort_2_asc.csv', 0, 5)
+save_and_show(sort_2_desc, 'sort_2_desc.csv')

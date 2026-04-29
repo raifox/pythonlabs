@@ -1,0 +1,14 @@
+case,cc3,country,year,systemic_crisis,exch_usd,domestic_debt_in_default,sovereign_external_debt_default,gdp_weighted_default,inflation_annual_cpi,independence,currency_crises,inflation_crises,banking_crisis
+1,DZA,Algeria,2007,0,66.8299,0,0,0,3.674,1,0,0,no_crisis
+2,AGO,Angola,2007,0,75.023,0,0,0,12.249,1,0,0,no_crisis
+10,CAF,Central African Republic,2007,0,445.5926907,0,1,0,0.935,1,0,0,no_crisis
+15,CIV,Ivory Coast,2007,0,0,0,1,0,1.896,1,0,0,no_crisis
+19,EGY,Egypt,2007,0,5.5038,0,0,0,10.959,1,0,0,no_crisis
+35,KEN,Kenya,2007,0,62.675,0,0,0,4.265,1,0,0,no_crisis
+38,MUS,Mauritius,2007,0,28.2162,0,0,0,8.827,1,0,0,no_crisis
+40,MAR,Morocco,2007,0,7.7132,0,0,0,2.036,1,0,0,no_crisis
+45,NGA,Nigeria,2007,0,117.968,0,0,0,5.413,1,0,0,no_crisis
+56,ZAF,South Africa,2007,0,6.81,0,0,0,7.09,1,0,0,no_crisis
+63,TUN,Tunisia,2007,0,1.2207,0,0,0,3.438,1,0,0,no_crisis
+69,ZMB,Zambia,2007,0,3.83,0,0,0,10.655,1,0,0,no_crisis
+70,ZWE,Zimbabwe,2007,1,1.90E-16,1,1,0,66279.89237,1,1,1,crisis

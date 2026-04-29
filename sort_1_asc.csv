@@ -1,0 +1,6 @@
+case,cc3,country,year,systemic_crisis,exch_usd,domestic_debt_in_default,sovereign_external_debt_default,gdp_weighted_default,inflation_annual_cpi,independence,currency_crises,inflation_crises,banking_crisis
+19,EGY,Egypt,1860,0,0.20661157,0,0,0.0,5.944477972,1,0,0,no_crisis
+19,EGY,Egypt,1861,0,0.20661157,0,0,0.0,5.952720023,1,0,0,no_crisis
+19,EGY,Egypt,1862,0,0.20661157,0,0,0.0,5.940860215,1,0,0,no_crisis
+19,EGY,Egypt,1863,0,0.20661157,0,0,0.0,5.95026643,1,0,0,no_crisis
+19,EGY,Egypt,1864,0,0.20661157,0,0,0.0,5.951383068,1,0,0,no_crisis

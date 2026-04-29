@@ -1,0 +1,6 @@
+case,cc3,country,year,systemic_crisis,exch_usd,domestic_debt_in_default,sovereign_external_debt_default,gdp_weighted_default,inflation_annual_cpi,independence,currency_crises,inflation_crises,banking_crisis
+69,ZMB,Zambia,2014,0,6.3856,0,0,0.0,7.811,1,0,0,no_crisis
+63,TUN,Tunisia,2014,0,1.862411798,0,0,0.0,4.924,1,0,0,no_crisis
+45,NGA,Nigeria,2014,1,155.25,0,0,0.0,8.048,1,0,0,crisis
+40,MAR,Morocco,2014,0,8.82,0,0,0.0,0.443,1,0,0,no_crisis
+38,MUS,Mauritius,2014,0,31.7374584,0,0,0.0,3.772,1,0,0,no_crisis
